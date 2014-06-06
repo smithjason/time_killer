@@ -1,0 +1,6 @@
+<%= form_for @posts do |post|  %>
+  <%= post.lable :title%>
+  <%= post.text_field :title, placeholder: 'Title' %>
+  <%= post.lable :content%>
+  <%= post.text_field :content, placeholder: 'Your Question' %>
+<% end %>

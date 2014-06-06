@@ -4,7 +4,13 @@ TimeKiller::Application.routes.draw do
   get "sign_up" => "users#new", :as => "sign_up"
 
   root to: 'users#new'
-  resources :users
+
+  get "posts", to: 'posts#index'
+  get "posts/:id", to: 'posts#show'
+
+  resources :users do
+    resources :posts
+  end
   resources :sessions
 
 end
