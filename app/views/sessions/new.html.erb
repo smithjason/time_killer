@@ -1,10 +1,10 @@
-<%=form_for @user do |f|  %>
+<%=form_tag(sessions_path, method: :post) do  %>
 
-  <%= f.label :email %>
-  <%= f.text_field :email %>
+  <%= label_tag :email %>
+  <%= text_field_tag :email %>
 
-  <%= f.label :password %>
-  <%= f.text_field :password %>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
 
-  <%= f.submit "Sign In" %>
+  <%= submit_tag "Sign In" %>
 <% end %>
