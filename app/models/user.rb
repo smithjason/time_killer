@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email
 
   def self.authenticate email, password
-    user = find_by_email email
+    user = find_by_email(email)
     if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
       user
     else
@@ -17,9 +17,7 @@ class User < ActiveRecord::Base
   end
 
   def encrypt_password
-    puts 'inside encrypt password!'
     if password.present?
-      puts 'inside encrypt password! > password.present?'
       self.password_salt = BCrypt::Engine.generate_salt
       self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
     end

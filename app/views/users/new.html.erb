@@ -1,4 +1,10 @@
 <h1>Sign Up</h1>
+<% if flash.present? %>
+  <ul class = "registration-notice">
+    <li><%= flash[:notice] %></li>
+  </ul>
+<% end %>
+
 <%= form_for @user do |f| %>
 
   <% if @user.errors.any? %>
