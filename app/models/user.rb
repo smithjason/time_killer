@@ -1,6 +1,4 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :password
-
   attr_accessor :password
 
   validates_presence_of   :password, :on => :create
