@@ -9,7 +9,8 @@ class UsersController < ApplicationController
       flash[:notice] = "Successfully Signed Up!"
       redirect_to root_url
     else
-      render :new
+      flash[:notice] = "Login Unsuccessful"
+      redirect_to sign_up_path
     end
   end
 
