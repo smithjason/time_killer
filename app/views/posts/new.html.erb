@@ -1,0 +1,8 @@
+New Post Form
+<%= form_for @new_post do |f|  %>
+  <%= f.label :title%>
+  <%= f.text_field :title, placeholder: 'Title' %>
+  <%= f.label :content%>
+  <%= f.text_field :content, placeholder: 'Your Question' %>
+  <%= f.submit %>
+<% end %>

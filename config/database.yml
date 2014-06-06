@@ -3,7 +3,9 @@ development:
   host: localhost
   username:
   password:
+
   database: time_killer_dev
+
   pool: 5
   timeout: 5000
 
@@ -16,6 +18,7 @@ test:
   username:
   password:
   database: time_killer_test
+
   pool: 5
   timeout: 5000
 
