@@ -20,6 +20,9 @@ ActiveRecord::Schema.define(version: 20140606181409) do
     t.string   "name"
     t.string   "email"
     t.string   "password"
+    t.string   "password_confirmation"
+    t.string   "password_hash"
+    t.string   "password_salt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
