@@ -10,5 +10,9 @@ describe User do
   end
 
   it "is invalid when supplying a non-unique email" do
+    user=User.create(name: "Tommy", email: "Kitten@kitten.com", password: "ilovecats")
+    tommy=User.create(name: "Tommy", email: "Kitten@kitten.com", password: "ilovecats")
+    expect(tommy).to have(1).error_on(:email)
   end
+
 end
