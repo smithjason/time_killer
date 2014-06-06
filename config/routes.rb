@@ -1,4 +1,11 @@
 TimeKiller::Application.routes.draw do
+
+  get "sessions/new"
+  root to: 'users#login'
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -39,7 +46,7 @@ TimeKiller::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
