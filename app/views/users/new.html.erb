@@ -5,6 +5,8 @@
   </ul>
 <% end %>
 
+<li><%=link_to "Sign in",  log_in_path  %></li>
+
 <%= form_for @user do |f| %>
 
   <% if @user.errors.any? %>
