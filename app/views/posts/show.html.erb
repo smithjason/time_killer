@@ -1,0 +1,12 @@
+<h1><%= @post.title %></h1><br>
+<%= @post.content %>
+
+<!-- Post Comments go here -->
+
+<!-- person who posted -->
+<hr>
+<h3> Your Answer </h3>
+<%= form_for @new_post do |f|  %>
+  <%= f.text_area :content, class:"text-cell", placeholder: 'Your Answer' %><br>
+  <%= f.submit %>
+<% end %>

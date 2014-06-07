@@ -1,11 +1,14 @@
 <%= link_to "SIGN UP", sign_up_path %>
 <%= link_to "SIGN IN", log_in_path %>
-<h1>Welcome to all the posts</h1>
-<div>
-  <% @posts.each do |post| %>
-  <ul>
-    <li><%= post.title %></li>
-  </ul>
-  <% end %>
+<h1 class="center">Welcome to all the posts</h1>
+<div class="post-list">
+  <div class = "posts">
+    <% @posts.each do |post| %>
+      <li><div class="votes">Votes</div></li>
+      <li><div class = "answers">Answers</div></li>
+      <li><%= link_to post.title, post_path(post) %></li><br>
+    <hr class="clear">
+    <% end %>
+  </div>
 </div>
 
