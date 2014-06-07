@@ -58,3 +58,8 @@ hr {
 .center{
   text-align: center;
 }
+
+.text-cell{
+  width: 500px;
+  height: 300px;
+}

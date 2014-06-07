@@ -6,7 +6,7 @@
     <% @posts.each do |post| %>
       <li><div class="votes">Votes</div></li>
       <li><div class = "answers">Answers</div></li>
-      <li><%= post.title %></li><br>
+      <li><%= link_to post.title, post_path(post) %></li><br>
     <hr class="clear">
     <% end %>
   </div>
