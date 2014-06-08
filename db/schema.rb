@@ -43,8 +43,7 @@ ActiveRecord::Schema.define(version: 20140608214047) do
 
   create_table "votes", force: true do |t|
     t.integer "user_id"
-    t.integer "up_vote"
-    t.integer "down_vote"
+    t.integer "up_down_vote"
     t.integer "votable_id"
     t.string  "votable_type"
   end
