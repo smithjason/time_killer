@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/thomascarpenito/Desktop/time_killer/config/environment.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/config/application.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/config/application.rb": [
         1,
         null,
         null,
@@ -38,13 +38,13 @@
         null,
         null
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/config/boot.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/config/boot.rb": [
         null,
         1,
         null,
         1
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/config/environments/test.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/config/environments/test.rb": [
         1,
         null,
         null,
@@ -82,7 +82,7 @@
         1,
         null
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/config/initializers/backtrace_silencers.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -91,13 +91,13 @@
         null,
         null
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/config/initializers/filter_parameter_logging.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/config/initializers/inflections.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -115,14 +115,14 @@
         null,
         null
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/config/initializers/mime_types.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null,
         null
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/config/initializers/secret_token.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/config/initializers/secret_token.rb": [
         null,
         null,
         null,
@@ -136,12 +136,12 @@
         null,
         1
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/config/initializers/session_store.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/config/initializers/wrap_parameters.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -157,7 +157,7 @@
         null,
         null
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/spec/factories/names.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/spec/factories/names.rb": [
         null,
         null,
         1,
@@ -166,45 +166,45 @@
         null,
         null
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/spec/factories/users.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/spec/factories/users.rb": [
         null,
         null,
         1,
         1,
-        5,
-        5,
-        5,
         null,
-        null
-      ],
-      "/Users/thomascarpenito/Desktop/time_killer/config/routes.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
+        6,
+        6,
         null,
         null
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/app/helpers/application_helper.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/config/routes.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/apprentice/Desktop/time_killer/time_killer/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/app/helpers/sessions_helper.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/app/helpers/sessions_helper.rb": [
         1,
         null
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/app/helpers/users_helper.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/app/controllers/sessions_controller.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/app/controllers/sessions_controller.rb": [
         1,
         null,
         1,
@@ -213,22 +213,33 @@
         1,
         2,
         2,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/apprentice/Desktop/time_killer/time_killer/app/controllers/application_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
         0,
+        null,
+        null,
+        1,
         0,
         null,
-        2,
         null,
+        1,
+        1,
         null,
         null
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null
-      ],
-      "/Users/thomascarpenito/Desktop/time_killer/spec/controllers/users_controller_spec.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/spec/controllers/users_controller_spec.rb": [
         1,
         null,
         1,
@@ -281,7 +292,7 @@
         null,
         null
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/app/controllers/users_controller.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/app/controllers/users_controller.rb": [
         1,
         1,
         1,
@@ -309,7 +320,7 @@
         null,
         null
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/spec/models/user_spec.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/spec/models/user_spec.rb": [
         1,
         null,
         1,
@@ -329,7 +340,7 @@
         null,
         null
       ],
-      "/Users/thomascarpenito/Desktop/time_killer/app/models/user.rb": [
+      "/Users/apprentice/Desktop/time_killer/time_killer/app/models/user.rb": [
         1,
         1,
         1,
@@ -342,22 +353,22 @@
         1,
         2,
         2,
-        0,
+        1,
         null,
         null,
         null,
         null,
         null,
         1,
-        5,
-        5,
-        5,
+        6,
+        6,
+        6,
         null,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1402191707
+    "timestamp": 1402255811
   }
 }
