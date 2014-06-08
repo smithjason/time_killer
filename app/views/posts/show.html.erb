@@ -9,9 +9,9 @@
   </ul>
   <%=link_to "comment", new_post_comment_path(@post.id)   %>
 <hr>
+<h3>Comments</h3>
 
 <h3> Answers: </h3>
-
   <ul> <!--   The shit show of how comments are displayed for an answer -->
   <% @post.answers.each do |answer| %>
     <h4><li><%= answer.content %></li></h4>
