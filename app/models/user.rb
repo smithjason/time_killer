@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessor :password
   has_many :votes
+  has_many :posts
   before_save :encrypt_password
 
   validates_confirmation_of :password
