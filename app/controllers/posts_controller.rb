@@ -2,7 +2,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-
   end
 
   def show
@@ -15,7 +14,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = Post.new(post_params.merge({user_id: current_user.id}))
     if @post.save
       flash[:notice] = 'Post created'
       redirect_to root_url
@@ -31,6 +30,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :content, :parent_id)
+    params.require(:post).permit(:title, :content, :parent_id, :user_id)
   end
 end

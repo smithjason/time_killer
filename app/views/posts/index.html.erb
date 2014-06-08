@@ -1,5 +1,9 @@
-<%= link_to "SIGN UP", sign_up_path %>
-<%= link_to "SIGN IN", log_in_path %>
+<% if !current_user %>
+  <%= link_to "SIGN UP", sign_up_path %>
+  <%= link_to "SIGN IN", log_in_path %>
+<% else %>
+  <%= link_to "SIGN OUT", sign_out_path %>
+<% end %>
 <h1 class="center">Welcome to all the posts</h1>
 <div class="post-list">
   <div class = "posts">
