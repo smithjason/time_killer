@@ -1,11 +1,15 @@
-<%= link_to "SIGN UP", sign_up_path %>
-<%= link_to "SIGN IN", log_in_path %>
-<h1 class="center">Welcome to all the posts</h1>
+
+<h1 class="center">All Posts</h1>
+
 <div class="post-list">
   <div class = "posts">
     <% @posts.each do |post| %>
       <% if post.parent_id==nil %>
-        <li><div class="votes">Votes</div></li>
+        <li>
+          <div class="votes">
+            <div class="mini-counts"></div>
+            <div>Votes</div>
+          </li>
         <li><div class = "answers">Answers</div></li>
         <li><%= link_to post.title, post_path(post) %></li><br>
       <% end %>
@@ -14,5 +18,5 @@
   </div>
 </div>
 
-<li><%=  link_to "Ask a question", new_post_path %></li>
+<!-- <li><%=  link_to "Ask a question", new_post_path %></li> -->
 

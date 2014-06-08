@@ -25,10 +25,55 @@ li{
   display: inline;
 }
 
+header {
+  height:30px;
+  margin:auto;
+  display: block;
+}
+.nav {
+  padding: 0px 25px;
+
+}
+.nav a:link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav a:visited {
+  color: white;
+}
+.nav a:hover {
+  color:black;
+}
+
+.top_links  li {
+  height:30px;
+  background-color: grey;
+  margin:0px 15px;
+  padding:10px 25px 0px 25px;
+  float: left;
+}
+.question_link li{
+  float: right;
+  height:30px;
+  background-color: grey;
+  margin:0px 15px;
+  padding:10px 25px 0px 25px;
+}
+
+
+.logo{
+  float: left;
+  font-size: 2em;
+}
+
 .votes {
   float: left;
-  height: 30px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
+}
+.mini-counts{
+  height:25;
 }
 
 .answers {
