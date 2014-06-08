@@ -1,9 +1,16 @@
-<h1><%= @post.title %></h1><br>
-<%= @post.content %>
+<h1>Title: <%= @post.title %></h1><br>
+<hr>
+<h3> Question: <%= @post.content %></h3>
+  <%=link_to "comment", new_post_comment_path(@post.id)   %>
+<hr>
 
+<h3> Answers: </h3>
 <ul>
 <% @post.answers.each do |answer| %>
-  <li><%= answer.content %></li><br>
+  <h4><li><%= answer.content %></li></h4>
+  <%=link_to "comment"  %>
+  <h5>@post.comments.each </h5>
+  <br>
 <% end %>
 </ul>
 <!-- Post Comments go here -->

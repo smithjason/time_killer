@@ -6,7 +6,9 @@ TimeKiller::Application.routes.draw do
   root to: 'posts#index'
 
 
-  resources :posts, only: [:new, :create, :show]
+  resources :posts do
+    resources :comments
+  end
   resources :users
   resources :sessions
 
