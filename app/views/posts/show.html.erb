@@ -1,22 +1,30 @@
 <h1>Title: <%= @post.title %></h1><br>
 <hr>
+
 <h3> Question: <%= @post.content %></h3>
+  <ul>
+    <% @post.comments.each do |post| %>
+      <li><p><%= post.content  %></p></li>
+    <% end %>
+  </ul>
   <%=link_to "comment", new_post_comment_path(@post.id)   %>
 <hr>
 <h3>Comments</h3>
 
 <h3> Answers: </h3>
-<ul>
-<% @post.answers.each do |answer| %>
-  <h4><li><%= answer.content %></li></h4>
-  <%= link_to "comment", new_post_comment_path(answer)  %>
-  <h5>@post.comments.each </h5>
-  <br>
-<% end %>
-</ul>
-<!-- Post Comments go here -->
+  <ul> <!--   The shit show of how comments are displayed for an answer -->
+  <% @post.answers.each do |answer| %>
+    <h4><li><%= answer.content %></li></h4>
+      <% answer.comments.each do |comment| %>
+        <%= comment.content %>
+        <br>
+      <% end %>
+    <%=link_to "comment", new_post_comment_path(answer.id)%>
+    <hr>
+  <% end %>
+  </ul>
 
-<!-- person who posted -->
+
 <hr>
 <h3> Your Answer </h3>
 <%= form_for @new_post do |f|  %>
