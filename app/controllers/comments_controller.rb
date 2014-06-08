@@ -6,6 +6,8 @@ class CommentsController < ApplicationController
   end
 
   def create
+    p "*" * 10
+    p params
     @comment = Comment.new(comment_params)
     if @comment.save
       redirect_to root_path
