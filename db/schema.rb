@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20140608195219) do
 
   create_table "comments", force: true do |t|
     t.string  "content"
-    t.integer "posts_id"
+    t.integer "post_id"
   end
 
   create_table "posts", force: true do |t|
