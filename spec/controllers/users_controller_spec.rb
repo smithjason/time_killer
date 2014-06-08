@@ -14,13 +14,21 @@ describe UsersController do
 		it "saves a user upon succesfull attributes" do 
 			expect {
 				post :create, :user => FactoryGirl.attributes_for(:user)}.to change{User.count}.by(1)
-				expect(response).to redirect_to(root_url)
 		end
 
 		it "does not save an invalid user" do
 			expect {
 				post :create, :user => {password: "t"}}.to change{User.count}.by(0)
-				response.should redirect_to(sign_up_path)
+		end
+
+		it "redirects user to root_url on success" do
+			post :create, :user => FactoryGirl.attributes_for(:user)
+			response.should redirect_to(root_url)
+		end
+
+		it "redirects user to sign_up_path on failure" do 
+			post :create, :user => {password: "t"}
+			response.should redirect_to(sign_up_path)
 		end
 
 	end
@@ -36,7 +44,7 @@ describe UsersController do
 			get :show, :id => user.id
 			expect(assigns(:user)).to eq(user)
 		end
-		
+
 	end
 
 end
