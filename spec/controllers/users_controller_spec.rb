@@ -29,7 +29,14 @@ describe UsersController do
 		let (:user) {FactoryGirl.create :user}
 		it "is successful" do 
 			get :show, :id => user.id
+			expect(response).to be_success
 		end
+
+		it "assigns @user to a user it finds in the databse" do 
+			get :show, :id => user.id
+			expect(assigns(:user)).to eq(user)
+		end
+		
 	end
 
 end
