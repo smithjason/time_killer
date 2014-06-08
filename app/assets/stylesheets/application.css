@@ -24,12 +24,12 @@ header {
   color: white;
 }
 .nav a:hover {
-  color:black;
+  color:#E8E8E8;
 }
 
 .top_links  li {
   height:30px;
-  background-color: grey;
+  background-color: #A0A0A0;
   margin:0px 15px;
   padding:10px 25px 0px 25px;
   float: left;
@@ -37,7 +37,7 @@ header {
 .question_link li{
   float: right;
   height:30px;
-  background-color: grey;
+  background-color: #A0A0A0;
   margin:0px 15px;
   padding:10px 25px 0px 25px;
 }
@@ -96,5 +96,22 @@ hr {
 
 .text-cell{
   width: 500px;
-  height: 300px;
+  height:500px;
+  vertical-align:text-top;
+  padding:4px 8px;
+  margin-bottom:0px;
+}
+.title-cell{
+  width: 515px;
+}
+
+.question_container h1 {
+  text-align: center;
+}
+.question_container {
+  margin:0px 50px;
+}
+.login{
+
+  margin:30px;
 }
