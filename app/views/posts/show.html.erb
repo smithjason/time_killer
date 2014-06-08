@@ -1,6 +1,11 @@
 <h1>Title: <%= @post.title %></h1><br>
 <hr>
 <h3> Question: <%= @post.content %></h3>
+  <ul>
+    <% @post.comments.each do |post| %>
+      <li><p><%= post.content  %></p></li>
+    <% end %>
+  </ul>
   <%=link_to "comment", new_post_comment_path(@post.id)   %>
 <hr>
 
