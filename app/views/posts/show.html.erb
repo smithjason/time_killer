@@ -1,6 +1,11 @@
 <h1><%= @post.title %></h1><br>
 <%= @post.content %>
 
+<ul>
+<% @post.answers.each do |answer| %>
+  <li><%= answer.content %></li><br>
+<% end %>
+</ul>
 <!-- Post Comments go here -->
 
 <!-- person who posted -->
@@ -8,5 +13,6 @@
 <h3> Your Answer </h3>
 <%= form_for @new_post do |f|  %>
   <%= f.text_area :content, class:"text-cell", placeholder: 'Your Answer' %><br>
+  <%= f.hidden_field :parent_id, :value => @post.id %>
   <%= f.submit %>
 <% end %>

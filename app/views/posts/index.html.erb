@@ -4,11 +4,15 @@
 <div class="post-list">
   <div class = "posts">
     <% @posts.each do |post| %>
-      <li><div class="votes">Votes</div></li>
-      <li><div class = "answers">Answers</div></li>
-      <li><%= link_to post.title, post_path(post) %></li><br>
+      <% if post.parent_id==nil %>
+        <li><div class="votes">Votes</div></li>
+        <li><div class = "answers">Answers</div></li>
+        <li><%= link_to post.title, post_path(post) %></li><br>
+      <% end %>
     <hr class="clear">
     <% end %>
   </div>
 </div>
+
+<li><%=  link_to "Ask a question", new_post_path %></li>
 
