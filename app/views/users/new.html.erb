@@ -1,4 +1,4 @@
-<h1>Sign Up</h1>
+<h1 class="login">Sign Up</h1>
 <% if flash.present? %>
   <ul class = "registration-notice">
     <li><%= flash[:notice] %></li>
@@ -17,24 +17,26 @@
       </ul>
     </div>
   <% end %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name, placeholder: 'First Name' %>
-  </p>
+  <div class="login">
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name, placeholder: 'First Name' %>
+    </p>
 
-  <p>
-    <%= f.label :email %><br>
-    <%= f.text_field :email, placeholder: 'Username' %>
-  </p>
-  <p>
-    <%= f.label :password %><br>
-    <%= f.password_field :password, placeholder: '' %>
-  </p>
-  <p>
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation %>
-  </p>
-  <p class="button">
-    <%= f.submit %>
-  </p>
+    <p>
+      <%= f.label :email %><br>
+      <%= f.text_field :email, placeholder: 'Username' %>
+    </p>
+    <p>
+      <%= f.label :password %><br>
+      <%= f.password_field :password, placeholder: '' %>
+    </p>
+    <p>
+      <%= f.label :password_confirmation %><br>
+      <%= f.password_field :password_confirmation %>
+    </p>
+    <p class="button">
+      <%= f.submit %>
+    </p>
+  </div>
 <% end %>

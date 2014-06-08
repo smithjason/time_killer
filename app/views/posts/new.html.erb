@@ -1,8 +1,12 @@
-New Post Form
-<%= form_for @new_post do |f|  %>
-  <%= f.label :title%>
-  <%= f.text_field :title, placeholder: 'Title' %>
-  <%= f.label :content%>
-  <%= f.text_field :content, placeholder: 'Your Question' %>
-  <%= f.submit %>
-<% end %>
+<div class="question_container">
+  <h1>Create your Question</h1>
+    <%= form_for @new_post do |f|  %>
+      <%= f.label :title%><br>
+      <%= f.text_field :title,class:"title-cell", placeholder: 'Title' %><br>
+      <%= f.label :content%><br>
+      <%= f.text_field :content,class:"text-cell"%>
+      <%= f.submit %>
+    <% end %>
+    <%= link_to 'Back', posts_path %>
+
+</div>
