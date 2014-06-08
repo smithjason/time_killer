@@ -19,13 +19,14 @@ ActiveRecord::Schema.define(version: 20140608214047) do
   create_table "comments", force: true do |t|
     t.string  "content"
     t.integer "post_id"
+    t.integer "user_id"
   end
 
   create_table "posts", force: true do |t|
     t.integer "user_id"
     t.string  "title"
     t.text    "content"
-    t.integer "vote"
+    t.integer "vote",      default: 0
     t.integer "parent_id"
     t.boolean "accepted",  default: false
   end

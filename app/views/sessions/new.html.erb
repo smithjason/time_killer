@@ -1,10 +1,13 @@
-<%=form_tag(sessions_path, method: :post) do  %>
+<div class="login">
+  <h1>Login</h1>
+  <%=form_tag(sessions_path, method: :post) do  %>
 
-  <%= label_tag :email %>
-  <%= text_field_tag :email %>
+    <%= label_tag :email %><br>
+    <%= text_field_tag :email %><br>
 
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
+    <%= label_tag :password %><br>
+    <%= password_field_tag :password %>
 
-  <%= submit_tag "Sign In" %>
-<% end %>
+    <%= submit_tag "Sign In" %>
+  <% end %>
+</div>

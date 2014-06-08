@@ -9,7 +9,13 @@ class SessionsController < ApplicationController
       login(user)
       redirect_to user_path(user)
     else
+      flash.now.alert = "Email or password is invalid"
       redirect_to log_in_path
     end
+  end
+
+  def destroy
+    session.clear
+    redirect_to root_path
   end
 end
