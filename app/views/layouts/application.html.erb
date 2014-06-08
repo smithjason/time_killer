@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TimeKiller</title>
+  <title>Time Killer</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div
+    <header class="nav">
+      <div class="logo">time<strong>killer</strong>
+      </div>
+      <div class = "top_links">
+        <ul>
+          <li><%= link_to "Sign Up", sign_up_path %></li>
+          <li><%= link_to "Sign In", log_in_path %></li>
+        </ul>
+      </div>
+      <div class = "question_link">
+        <ul>
+          <li><%= link_to "Ask Question", new_post_path %></li>
+        </ul>
+      </div>
+    </header>
+  </div>
+  <div class = "clear "></div>
 
 <%= yield %>
 
