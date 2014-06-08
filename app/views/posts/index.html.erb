@@ -1,5 +1,5 @@
 
-<h1 class="center">All Posts</h1>
+<h1 class="center">All Questions</h1>
 
 <div class="post-list">
   <div class = "posts">
@@ -7,12 +7,16 @@
       <% if post.parent_id==nil %>
         <li>
           <div class="votes">
-            <div class="mini-counts"></div>
+            <div class="mini-counts"><%= post.vote %>  </div>
             <div>Votes</div>
           </li>
-        <li><div class = "answers">Answers</div></li>
+          <li>
+            <div class = "answers">
+            <div class="mini-counts">0</div>
+            <div>Answers</div>
+          </li>
         <li><%= link_to post.title, post_path(post) %></li><br>
-      <% end %>
+      <% end %><br><br>
     <hr class="clear">
     <% end %>
   </div>
