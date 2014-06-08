@@ -3,12 +3,13 @@
 <h3> Question: <%= @post.content %></h3>
   <%=link_to "comment", new_post_comment_path(@post.id)   %>
 <hr>
+<h3>Comments</h3>
 
 <h3> Answers: </h3>
 <ul>
 <% @post.answers.each do |answer| %>
   <h4><li><%= answer.content %></li></h4>
-  <%=link_to "comment"  %>
+  <%= link_to "comment", new_post_comment_path(answer)  %>
   <h5>@post.comments.each </h5>
   <br>
 <% end %>

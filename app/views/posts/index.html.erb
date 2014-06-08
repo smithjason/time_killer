@@ -2,21 +2,22 @@
   <%= link_to "SIGN UP", sign_up_path %>
   <%= link_to "SIGN IN", log_in_path %>
 <% else %>
+  <%= link_to "MY PROFILE", user_path(current_user) %>
   <%= link_to "SIGN OUT", sign_out_path %>
 <% end %>
 <h1 class="center">Welcome to all the posts</h1>
 <div class="post-list">
   <div class = "posts">
-    <% @posts.each do |post| %>
-      <% if post.parent_id==nil %>
-        <li><div class="votes">Votes</div></li>
-        <li><div class = "answers">Answers</div></li>
-        <li><%= link_to post.title, post_path(post) %></li><br>
-      <% end %>
+    <% @questions.each do |question| %>
+      <li><div class="votes">Votes</div></li>
+      <li><div class = "answers">Answers</div></li>
+      <li><%= link_to question.title, post_path(question) %></li><br>
     <hr class="clear">
     <% end %>
   </div>
 </div>
 
-<li><%=  link_to "Ask a question", new_post_path %></li>
+<% if current_user %>
+  <li><%=  link_to "Ask a question", new_post_path %></li>
+<% end %>
 

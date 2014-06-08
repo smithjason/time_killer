@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    @questions = Post.all_questions
   end
 
   def show
@@ -14,7 +14,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params.merge({user_id: current_user.id}))
+    params = post_params.merge({user_id: current_user.id})
+    @post = Post.new(params)
     if @post.save
       flash[:notice] = 'Post created'
       redirect_to root_url

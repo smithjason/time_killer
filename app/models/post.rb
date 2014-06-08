@@ -4,4 +4,8 @@ class Post < ActiveRecord::Base
 
   belongs_to :parent, class_name: "Post"
   has_many :comments
+
+  def self.all_questions
+    Post.where(parent_id: nil)
+  end
 end
