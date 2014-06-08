@@ -6,13 +6,13 @@ describe SessionsController do
     it "returns http success" do
       get 'new'
       response.should be_success
-    end    	
+    end
    end
 
-   describe "#create " do 
-    let (:user) {FactoryGirl.create :user}
+   describe "#create " do
+    let (:user) {create :user}
     it "redirects to the user path on success" do
-      	post :create, :user => FactoryGirl.attributes_for(:user)
+      	post :create, {email: user.email, password: user.password}
       response.should redirect_to(user_path(user.id))
     end
 
