@@ -15,10 +15,11 @@
   <ul>
   <% @post.answers.each do |answer| %>
     <h4><li><%= answer.content %></li></h4>
-    <%=link_to "comment", new_post_comment_path(answer.id)%>
-      <% answer.answers.each do |comment| %>
+      <% answer.comments.each do |comment| %>
         <%= comment.content %>
+        <br>
       <% end %>
+    <%=link_to "comment", new_post_comment_path(answer.id)%>
     <hr>
   <% end %>
   </ul>
