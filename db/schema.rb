@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20140608195219) do
     t.integer "user_id"
     t.string  "title"
     t.text    "content"
-    t.integer "vote"
+    t.integer "vote",      default: 0
     t.integer "parent_id"
     t.boolean "accepted",  default: false
   end
