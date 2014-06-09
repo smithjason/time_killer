@@ -18,7 +18,7 @@
         </div>
       </li>
       <!-- This is hideous and I know it...  -->
-      <li><%= link_to question.title, post_path(question) %></li> Submitted by: <%= question.user.name %>
+      <li><%= link_to question.title, post_path(question) %></li>  - <%= question.user.name %>
     </div>
     <hr class="clear">
     <% end %>
