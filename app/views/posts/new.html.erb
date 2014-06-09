@@ -4,7 +4,7 @@
       <%= f.label :title%><br>
       <%= f.text_field :title,class:"title-cell", placeholder: 'Title' %><br>
       <%= f.label :content%><br>
-      <%= f.text_field :content,class:"text-cell"%>
+      <%= f.text_area :content,class:"text-cell"%>
       <%= f.submit %>
     <% end %>
     <%= link_to 'Back', posts_path %>
