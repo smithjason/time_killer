@@ -9,4 +9,6 @@ class CreatePosts < ActiveRecord::Migration
       t.boolean     :accepted, default: false
     end
   end
+
+##We can make a method that puts a value for vote.
 end
