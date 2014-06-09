@@ -3,15 +3,15 @@ require 'spec_helper'
 describe UsersController do
 
 	describe "#new" do
-		it 'renders the #new template' do 
+		it 'renders the #new template' do
 			get :new
 			response.should render_template (:new)
 		end
 	end
 
-	describe "#create" do 
+	describe "#create" do
 
-		it "saves a user upon succesfull attributes" do 
+		it "saves a user upon successful attributes" do
 			expect {
 				post :create, :user => FactoryGirl.attributes_for(:user)}.to change{User.count}.by(1)
 		end
@@ -26,21 +26,23 @@ describe UsersController do
 			response.should redirect_to(root_url)
 		end
 
-		it "redirects user to sign_up_path on failure" do 
+		it "redirects user to sign_up_path on failure" do
 			post :create, :user => {password: "t"}
 			response.should redirect_to(sign_up_path)
 		end
 
 	end
 
-	describe "#show" do 
-		let (:user) {FactoryGirl.create :user}
-		it "is successful" do 
-			get :show, :id => user.id
-			expect(response).to be_success
+	describe "#show" do
+		let (:user) {create :user}
+		let (:post) {create :post}
+
+		it "is successful" do
+			get :show, {id: user.id, user_id: post.user_id}
+			expect(assigns(:user)).to eq(user)
 		end
 
-		it "assigns @user to a user it finds in the databse" do 
+		it "assigns @user to a user it finds in the database" do
 			get :show, :id => user.id
 			expect(assigns(:user)).to eq(user)
 		end
