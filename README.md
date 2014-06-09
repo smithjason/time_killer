@@ -6,7 +6,7 @@ An app that allows users to post questions, and submit answers.
 
 ##Link
 
-[Time Killer](timekiller.herokuapp.com)
+[Time Killer](http://timekiller.herokuapp.com)
 
 ##Contributions by:
 
