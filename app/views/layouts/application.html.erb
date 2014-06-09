@@ -23,11 +23,13 @@
           <% end %>
         </ul>
       </div>
+      <% if session[:user_id]  %>
       <div class = "question_link">
         <ul>
           <li><%= link_to "Ask Question", new_post_path %></li>
         </ul>
       </div>
+      <%end%>
     </header>
   </div>
   <div class = "clear "></div>
